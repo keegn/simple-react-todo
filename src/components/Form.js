@@ -7,7 +7,7 @@ const Form = props => (
     <Input
       onChange={props.onChange}
       type="text"
-      placeholder="Add a todo"
+      placeholder="Add a task"
       value={props.task}
       name={props.name}
     />

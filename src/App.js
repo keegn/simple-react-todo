@@ -4,8 +4,6 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
-import "./styles.css";
-
 class App extends React.Component {
   state = {
     todos: [{ task: "Clean basement", id: Date.now(), completed: false }],

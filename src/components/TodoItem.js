@@ -1,8 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+const ToggleItemStyle = styled.div(props => ({
+  textDecoration: props.textDecoration
+}));
 
 const TodoItem = props => (
-  <div onClick={() => props.handleCompleted(props.data.id)}>
+  <ToggleItemStyle
+    textDecoration={props.data.completed ? "line-through" : null}
+    onClick={() => props.handleCompleted(props.data.id)}
+  >
     {props.data.task}
-  </div>
+  </ToggleItemStyle>
 );
 export default TodoItem;

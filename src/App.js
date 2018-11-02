@@ -8,7 +8,7 @@ import "./styles.css";
 
 class App extends React.Component {
   state = {
-    todos: [],
+    todos: [{ task: "Clean basement", id: Date.now(), completed: false }],
     task: ""
   };
 
@@ -20,8 +20,43 @@ class App extends React.Component {
     event.preventDefault();
     this.setState(prevState => {
       return {
-        todos: prevState.todos.concat(this.state.task),
+        todos: prevState.todos.concat({
+          task: this.state.task,
+          id: Date.now(),
+          completed: false
+        }),
         task: ""
+      };
+    });
+  };
+
+  // map through the todos and if the id matches the id passed in, flip the completed flag
+  handleCompleted = id => {
+    this.setState(prevState => {
+      return {
+        todos: prevState.todos.map(todo => {
+          if (todo.id == id) {
+            todo.completed = !todo.completed;
+            return todo;
+          } else {
+            return todo;
+          }
+        })
+      };
+    });
+  };
+
+  handleDelete = event => {
+    event.preventDefault();
+    this.setState(prevState => {
+      return {
+        todos: prevState.todos.filter(todo => {
+          if (todo.completed) {
+            return null;
+          } else {
+            return todo;
+          }
+        })
       };
     });
   };
@@ -30,12 +65,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header headingText="React Todo" />
-        <TodoList todos={this.state.todos} />
+        <TodoList
+          todos={this.state.todos}
+          handleCompleted={this.handleCompleted}
+        />
         <Form
           task={this.state.task}
           name="task"
           onChange={this.handleInput}
           onSubmit={this.handleSubmit}
+          handleDelete={this.handleDelete}
         />
       </div>
     );

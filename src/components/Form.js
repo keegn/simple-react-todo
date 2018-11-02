@@ -12,7 +12,7 @@ const Form = props => (
       name={props.name}
     />
     <Button text="Add todo" />
-    <Button onClick={props.handleDelete} text="Clear completed" />
+    <Button handleDelete={props.handleDelete} text="Clear completed" />
   </form>
 );
 

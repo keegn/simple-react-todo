@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
+import { AppContainer } from "./components/global-styles/GlobalStyles";
+
 class App extends React.Component {
   state = {
     todos: [{ task: "Clean basement", id: Date.now(), completed: false }],
@@ -57,7 +59,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <AppContainer>
         <Header headingText="React Todo" />
         <TodoList
           todos={this.state.todos}
@@ -70,7 +72,7 @@ class App extends React.Component {
           onSubmit={this.handleSubmit}
           handleDelete={this.handleDelete}
         />
-      </div>
+      </AppContainer>
     );
   }
 }

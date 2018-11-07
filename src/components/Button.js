@@ -1,7 +1,8 @@
 import React from "react";
+import { StyledButton } from "./global-styles/GlobalStyles";
 
 const Button = props => (
-  <button onClick={props.handleDelete}>{props.text}</button>
+  <StyledButton onClick={props.handleDelete}>{props.text}</StyledButton>
 );
 
 export default Button;

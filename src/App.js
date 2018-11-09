@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 import EmptyListState from "./components/EmptyListState";
+// for later: yarn add react-spring --> see https://github.com/drcmda/react-spring
 
 import { AppContainer } from "./components/global-styles/GlobalStyles";
 

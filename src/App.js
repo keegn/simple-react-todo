@@ -63,13 +63,13 @@ class App extends React.Component {
     return (
       <AppContainer>
         <Header headingText="React Todo" />
-        {this.state.todos.length > 0 ? (
-          <TodoList
-            todos={this.state.todos}
-            handleCompleted={this.handleCompleted}
-          />
-        ) : (
+        {this.state.todos.length <= 0 ? (
           <EmptyListState />
+        ) : (
+           <TodoList
+          todos={this.state.todos}
+          handleCompleted={this.handleCompleted}
+        />
         )}
         <Form
           task={this.state.task}

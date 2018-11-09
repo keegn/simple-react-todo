@@ -24,3 +24,11 @@ export const StyledInput = styled.input`
   color: black;
   font-size: 14px;
 `;
+
+export const StyledForm = styled.form`
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 20px;
+`;

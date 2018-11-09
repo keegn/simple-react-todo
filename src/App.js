@@ -9,7 +9,7 @@ import { AppContainer } from "./components/global-styles/GlobalStyles";
 
 class App extends React.Component {
   state = {
-    todos: [{ task: "Clean basement", id: Date.now(), completed: false }],
+    todos: [],
     task: ""
   };
 

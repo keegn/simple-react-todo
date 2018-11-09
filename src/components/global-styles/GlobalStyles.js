@@ -4,12 +4,12 @@ export const AppContainer = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-gap: 20px;
+  grid-gap: 40px;
 `;
 
 export const StyledButton = styled.button`
   padding: 8px 8px;
-  width: 176px;
+  width: 164px;
   border: 1px solid black;
   outline: none;
   color: white;

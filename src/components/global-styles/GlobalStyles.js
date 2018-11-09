@@ -9,18 +9,18 @@ export const AppContainer = styled.div`
 
 export const StyledButton = styled.button`
   padding: 8px 8px;
-  width: 164px;
+  width: 180px;
   border: 1px solid black;
   outline: none;
   color: white;
   background: black;
   font-size: 14px;
-  box-sizing: border-box;
 `;
 
 export const StyledInput = styled.input`
   padding: 8px 8px;
   background: white;
+  width: 164px;
   outline: none;
   border: 1px solid black;
   color: black;

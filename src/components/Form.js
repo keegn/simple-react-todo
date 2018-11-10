@@ -11,7 +11,7 @@ const Form = props => (
       placeholder="Add a task"
       value={props.task}
       name={props.name}
-      autocomplete="off"
+      autoComplete="off"
     />
     <Button text="Add todo" />
     <Button handleDelete={props.handleDelete} text="Clear completed" />

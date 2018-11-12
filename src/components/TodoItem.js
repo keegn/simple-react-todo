@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ToggleItemStyle = styled.div(props => ({
-  textDecoration: props.textDecoration
+  textDecoration: props.textDecoration,
+  padding: '10px',
 }));
 
 const TodoItem = props => (

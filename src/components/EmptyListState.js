@@ -2,7 +2,7 @@ import React from "react";
 
 const EmptyListState = props => (
   <div>
-    <h2>🎉</h2>
+    <h1>🎉</h1>
   </div>
 );
 export default EmptyListState;

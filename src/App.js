@@ -37,7 +37,7 @@ class App extends React.Component {
     this.setState(prevState => {
       return {
         todos: prevState.todos.map(todo => {
-          if (todo.id == id) {
+          if (todo.id === id) {
             todo.completed = !todo.completed;
             return todo;
           } else {

@@ -21,14 +21,16 @@ class App extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     this.setState(prevState => {
-      return {
-        todos: prevState.todos.concat({
-          task: this.state.task,
-          id: Date.now(),
-          completed: false
-        }),
-        task: ""
-      };
+      if (this.state.task !== '') {
+        return {
+          todos: prevState.todos.concat({
+            task: this.state.task,
+            id: Date.now(),
+            completed: false
+          }),
+          task: ""
+        };
+      }
     });
   };
 

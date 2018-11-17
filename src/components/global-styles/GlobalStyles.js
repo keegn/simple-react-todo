@@ -6,7 +6,9 @@ export const AppContainer = styled.div`
   justify-items: center;
   grid-gap: 40px;
 `;
-
+export const StyledH1 = styled.h1`
+  font-size: 48px;
+`;
 export const StyledButton = styled.button`
   padding: 8px 8px;
   width: 180px;

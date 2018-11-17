@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
+import { StyledH1 } from './global-styles/GlobalStyles';
 
 const EmptyListState = props => (
   <div>
-    <h1>🎉</h1>
+    <StyledH1>🎉</StyledH1>
   </div>
 );
 export default EmptyListState;

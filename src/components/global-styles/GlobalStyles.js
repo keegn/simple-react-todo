@@ -4,10 +4,11 @@ export const AppContainer = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-gap: 40px;
+  grid-gap: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 `;
 export const StyledH1 = styled.h1`
-  font-size: 60px;
+  font-size: 64px;
 `;
 export const StyledButton = styled.button`
   padding: 8px 8px;

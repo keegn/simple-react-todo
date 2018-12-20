@@ -1,16 +1,15 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ToggleItemStyle = styled.div(props => ({
-  textDecoration: props.textDecoration,
   padding: '10px',
+  color: props.color
 }));
 
 const TodoItem = props => (
   <ToggleItemStyle
-    textDecoration={props.data.completed ? "line-through" : null}
-    onClick={() => props.handleCompleted(props.data.id)}
-  >
+    color={props.data.completed ? '#EF265C' : 'white'}
+    onClick={() => props.handleCompleted(props.data.id)}>
     {props.data.task}
   </ToggleItemStyle>
 );

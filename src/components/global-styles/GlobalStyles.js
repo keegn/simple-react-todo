@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
   margin: 0;
   padding: 0;
-  background: black;
+  background: #0F111A;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -29,25 +29,26 @@ export const StyledH1 = styled.h1`
 export const StyledButton = styled.button`
   padding: 12px 12px;
   width: 216px;
-  border: 1px solid #3b91ff;
+  border: 1px solid #89DDFF
   outline: none;
   color: white;
-  background: black;
+  background: #0F111A;
   font-size: 14px;
   cursor: pointer;
   border-radius: 20px;
   & + & {
-    border: 1px solid #ef265c;
+    border: 1px solid #F07178;
   }
 `;
 
 export const StyledInput = styled.input`
   padding: 12px 12px;
-  background: #1b1b1b;
+  background: #464b5d;
   width: 194px;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid #0f111a;
   color: white;
+  border-radius: 4px;
   font-size: 14px;
   &::-webkit-input-placeholder {
     color: white;

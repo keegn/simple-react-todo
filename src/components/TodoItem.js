@@ -8,7 +8,7 @@ const ToggleItemStyle = styled.div(props => ({
 
 const TodoItem = props => (
   <ToggleItemStyle
-    color={props.data.completed ? '#EF265C' : 'white'}
+    color={props.data.completed ? '#F07178' : 'white'}
     onClick={() => props.handleCompleted(props.data.id)}>
     {props.data.task}
   </ToggleItemStyle>

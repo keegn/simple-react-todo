@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ToggleItemStyle = styled.div(props => ({
-  padding: '10px',
-  color: props.color
-}));
-
+const ToggleCompletedStyle = styled.div`
+  padding: 10px;
+  color: ${props => props.color || 'white'};
+  cursor: pointer;
+`;
 const TodoItem = props => (
-  <ToggleItemStyle
-    color={props.data.completed ? '#F07178' : 'white'}
+  <ToggleCompletedStyle
+    color={props.data.completed && '#F07178'}
     onClick={() => props.handleCompleted(props.data.id)}>
     {props.data.task}
-  </ToggleItemStyle>
+  </ToggleCompletedStyle>
 );
 export default TodoItem;

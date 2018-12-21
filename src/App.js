@@ -15,7 +15,8 @@ class App extends React.Component {
   };
 
   handleInput = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    const { name, value } = event.target
+    this.setState({ [name]: value });
   };
 
   handleSubmit = event => {

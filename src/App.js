@@ -39,14 +39,9 @@ class App extends React.Component {
   handleCompleted = id => {
     this.setState(prevState => {
       return {
-        todos: prevState.todos.map(todo => {
-          if (todo.id === id) {
-            todo.completed = !todo.completed;
-            return todo;
-          } else {
-            return todo;
-          }
-        })
+        todos: prevState.todos.map(todo =>
+          todo.id === id ? (todo.completed = !todo.completed && todo) : todo
+        )
       };
     });
   };
@@ -55,9 +50,7 @@ class App extends React.Component {
     event.preventDefault();
     this.setState(prevState => {
       return {
-        todos: prevState.todos.filter(todo => {
-          return !todo.completed ? todo : null;
-        })
+        todos: prevState.todos.filter(todo => !todo.completed && todo)
       };
     });
   };
